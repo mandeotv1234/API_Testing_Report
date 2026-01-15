@@ -1,0 +1,1419 @@
+{
+	"id": "e5433a05-0525-4f01-9982-5f5e9bc5d69c",
+	"name": "CSC13003 - API Testing - Search Employee",
+	"timestamp": "2026-01-15T14:59:57.690Z",
+	"collection_id": "39921256-f603ebb5-3151-49d1-812b-8d5f3dff3a93",
+	"folder_id": 0,
+	"environment_id": "39921256-253fc459-aa73-4929-a13f-64c7d7770b63",
+	"totalPass": 87,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-01-15T14:59:33.549Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ec1f2908-f06c-4e8b-80d7-e1525ae9df96",
+			"name": "TC_001",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 623,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				623
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "605b6b38-1d74-4a87-9092-5360eb5e8008",
+			"name": "TC_002",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 629,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401 Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401 Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				629
+			],
+			"allTests": [
+				{
+					"Status code is 401 Unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "4d424473-457d-493c-8d7f-d6a4d26f0f1f",
+			"name": "TC_003",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=50",
+			"time": 599,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				599
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "ffd0d0b6-4ace-422e-a235-e87f62bc34be",
+			"name": "TC_004",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=0",
+			"time": 721,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response returns data list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response returns data list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				721
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response returns data list": true
+				}
+			]
+		},
+		{
+			"id": "f48b96b0-49f3-42a8-baa0-2ead66ecf75c",
+			"name": "TC_005",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=-1",
+			"time": 641,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				641
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "a3c5842a-0c1e-4c33-a53c-c89bd21c1193",
+			"name": "TC_006",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=abc",
+			"time": 513,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				513
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "336d3a27-fffb-4f2e-a863-9487b4a470bd",
+			"name": "TC_007",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=50 OR 1=1",
+			"time": 665,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				665
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "cf1fbe83-29cb-40ed-8d98-824751fdec4b",
+			"name": "TC_008",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=1",
+			"time": 572,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				572
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "e6e45290-40c4-4603-9c47-98107f54d670",
+			"name": "TC_009",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=4",
+			"time": 600,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				600
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "75cdf945-8a84-4f33-b868-ba8e35c8080f",
+			"name": "TC_010",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=5",
+			"time": 633,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response returns empty data list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response returns empty data list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				633
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response returns empty data list": true
+				}
+			]
+		},
+		{
+			"id": "f1031426-99ac-4712-b0c6-dd05b42d6ca5",
+			"name": "TC_011",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=text",
+			"time": 656,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				656
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "81e988bd-faf5-4396-808a-1bbe85a9108c",
+			"name": "TC_012",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=50",
+			"time": 734,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				734
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "ca662b12-6293-4a3d-804a-b6f8670a1877",
+			"name": "TC_013",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?includeEmployees=currentAndPast",
+			"time": 805,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				805
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "00832270-2bf4-4ba9-b56c-02767878ba02",
+			"name": "TC_014",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?includeEmployees=onlyPast",
+			"time": 570,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				570
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "2c9f9d58-b4ae-440c-b824-174f71b6c347",
+			"name": "TC_015",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?includeEmployees=futurePeople",
+			"time": 607,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				607
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "422ac544-c9f9-4fb8-bf13-f60f59fc53db",
+			"name": "TC_016",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?supervisorEmpNumbers[]=12",
+			"time": 678,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				678
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "11a631c0-7cd1-452f-a8a4-76902ad34098",
+			"name": "TC_017",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?supervisorEmpNumbers=12",
+			"time": 608,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				608
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "7852691f-b030-44ce-81d7-7317202104e6",
+			"name": "TC_018",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees? jobTitleId=1",
+			"time": 707,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				707
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "23d02965-e9bd-4a18-97ed-4341547b830d",
+			"name": "TC_019",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees? jobTitleId=9",
+			"time": 523,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				523
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "e26b4772-efdb-4c35-b5db-ad8d6b1d0bfa",
+			"name": "TC_020",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees? jobTitleId=99",
+			"time": 632,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response returns empty data list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response returns empty data list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				632
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response returns empty data list": true
+				}
+			]
+		},
+		{
+			"id": "950a88e7-1a83-4b26-8685-72c02f5c3cf6",
+			"name": "TC_021",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?subunitId=1",
+			"time": 630,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				630
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "39709599-e3e5-499c-8b75-4b628e0e1677",
+			"name": "TC_022",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?subunitId=6",
+			"time": 576,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				576
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "69ce16b8-bd87-41fc-ac79-14071bd510fd",
+			"name": "TC_023",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?subunitId=10",
+			"time": 681,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response returns empty data list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response returns empty data list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				681
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response returns empty data list": true
+				}
+			]
+		},
+		{
+			"id": "2b0aa32f-8301-4aaa-9f0e-0895a2ef4b26",
+			"name": "TC_024",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=0077",
+			"time": 614,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				614
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "c9b1a49c-8161-40fa-9875-9b6484fcd939",
+			"name": "TC_025",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=999999",
+			"time": 715,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response returns empty data list": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response returns empty data list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				715
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response returns empty data list": true
+				}
+			]
+		},
+		{
+			"id": "73f1e5d8-9ae9-4d57-a368-2b7873a97ddc",
+			"name": "TC_026",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=' OR '1'='1",
+			"time": 610,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				610
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "05b40985-1c7e-472d-ad18-0624eef66c82",
+			"name": "TC_027",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=<script>alert(1)</script>",
+			"time": 740,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				740
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "cf75e1d3-b41a-48ff-bc87-d8e0afe36fee",
+			"name": "TC_028",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=employee.firstName&sortOrder=ASC",
+			"time": 914,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				914
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "ece38980-9bd6-4c1c-9d3c-e27df42a3cdc",
+			"name": "TC_029",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=employee.firstName&sortOrder=DESC",
+			"time": 738,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				738
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "9f4521f8-8f3c-4709-8a83-ded2640f721f",
+			"name": "TC_030",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=invalid_column",
+			"time": 521,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				521
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "d17d1ca1-bc6e-4ad2-ad46-e5647e821fc1",
+			"name": "TC_031",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=employee.firstName&sortOrder=RANDOM",
+			"time": 571,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				571
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "dc9049d8-4dac-44a2-9972-dc6a4c99fdda",
+			"name": "TC_032",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?empNumber=1",
+			"time": 676,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				676
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "e9242f75-9178-46e6-be5d-895df5fb72a1",
+			"name": "TC_033",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?empNumber=ABC",
+			"time": 592,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				592
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "7a4b0d0a-1ada-446e-bae4-0727d135503c",
+			"name": "TC_034",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?jobTitleId=7&subunitId=3&empStatusId=1",
+			"time": 613,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				613
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		},
+		{
+			"id": "7a84e639-6f97-4f07-80a1-2a25525d9f50",
+			"name": "TC_035",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees?jobTitleId=1&subunitId=6",
+			"time": 700,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true,
+				"Response has data array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has data array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				700
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true,
+					"Response has data array": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 22607,
+	"collection": {
+		"requests": [
+			{
+				"id": "ec1f2908-f06c-4e8b-80d7-e1525ae9df96",
+				"method": "GET"
+			},
+			{
+				"id": "605b6b38-1d74-4a87-9092-5360eb5e8008",
+				"method": "GET"
+			},
+			{
+				"id": "4d424473-457d-493c-8d7f-d6a4d26f0f1f",
+				"method": "GET"
+			},
+			{
+				"id": "ffd0d0b6-4ace-422e-a235-e87f62bc34be",
+				"method": "GET"
+			},
+			{
+				"id": "f48b96b0-49f3-42a8-baa0-2ead66ecf75c",
+				"method": "GET"
+			},
+			{
+				"id": "a3c5842a-0c1e-4c33-a53c-c89bd21c1193",
+				"method": "GET"
+			},
+			{
+				"id": "336d3a27-fffb-4f2e-a863-9487b4a470bd",
+				"method": "GET"
+			},
+			{
+				"id": "cf1fbe83-29cb-40ed-8d98-824751fdec4b",
+				"method": "GET"
+			},
+			{
+				"id": "e6e45290-40c4-4603-9c47-98107f54d670",
+				"method": "GET"
+			},
+			{
+				"id": "75cdf945-8a84-4f33-b868-ba8e35c8080f",
+				"method": "GET"
+			},
+			{
+				"id": "f1031426-99ac-4712-b0c6-dd05b42d6ca5",
+				"method": "GET"
+			},
+			{
+				"id": "81e988bd-faf5-4396-808a-1bbe85a9108c",
+				"method": "GET"
+			},
+			{
+				"id": "ca662b12-6293-4a3d-804a-b6f8670a1877",
+				"method": "GET"
+			},
+			{
+				"id": "00832270-2bf4-4ba9-b56c-02767878ba02",
+				"method": "GET"
+			},
+			{
+				"id": "2c9f9d58-b4ae-440c-b824-174f71b6c347",
+				"method": "GET"
+			},
+			{
+				"id": "422ac544-c9f9-4fb8-bf13-f60f59fc53db",
+				"method": "GET"
+			},
+			{
+				"id": "11a631c0-7cd1-452f-a8a4-76902ad34098",
+				"method": "GET"
+			},
+			{
+				"id": "7852691f-b030-44ce-81d7-7317202104e6",
+				"method": "GET"
+			},
+			{
+				"id": "23d02965-e9bd-4a18-97ed-4341547b830d",
+				"method": "GET"
+			},
+			{
+				"id": "e26b4772-efdb-4c35-b5db-ad8d6b1d0bfa",
+				"method": "GET"
+			},
+			{
+				"id": "950a88e7-1a83-4b26-8685-72c02f5c3cf6",
+				"method": "GET"
+			},
+			{
+				"id": "39709599-e3e5-499c-8b75-4b628e0e1677",
+				"method": "GET"
+			},
+			{
+				"id": "69ce16b8-bd87-41fc-ac79-14071bd510fd",
+				"method": "GET"
+			},
+			{
+				"id": "2b0aa32f-8301-4aaa-9f0e-0895a2ef4b26",
+				"method": "GET"
+			},
+			{
+				"id": "c9b1a49c-8161-40fa-9875-9b6484fcd939",
+				"method": "GET"
+			},
+			{
+				"id": "73f1e5d8-9ae9-4d57-a368-2b7873a97ddc",
+				"method": "GET"
+			},
+			{
+				"id": "05b40985-1c7e-472d-ad18-0624eef66c82",
+				"method": "GET"
+			},
+			{
+				"id": "cf75e1d3-b41a-48ff-bc87-d8e0afe36fee",
+				"method": "GET"
+			},
+			{
+				"id": "ece38980-9bd6-4c1c-9d3c-e27df42a3cdc",
+				"method": "GET"
+			},
+			{
+				"id": "9f4521f8-8f3c-4709-8a83-ded2640f721f",
+				"method": "GET"
+			},
+			{
+				"id": "d17d1ca1-bc6e-4ad2-ad46-e5647e821fc1",
+				"method": "GET"
+			},
+			{
+				"id": "dc9049d8-4dac-44a2-9972-dc6a4c99fdda",
+				"method": "GET"
+			},
+			{
+				"id": "e9242f75-9178-46e6-be5d-895df5fb72a1",
+				"method": "GET"
+			},
+			{
+				"id": "7a4b0d0a-1ada-446e-bae4-0727d135503c",
+				"method": "GET"
+			},
+			{
+				"id": "7a84e639-6f97-4f07-80a1-2a25525d9f50",
+				"method": "GET"
+			}
+		]
+	}
+}

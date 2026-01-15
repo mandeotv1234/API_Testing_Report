@@ -1,0 +1,525 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSC13003 - API Testing - Search Employee - Test Report</title>
+        <style>
+            body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5; }
+            .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            h1 { color: #333; }
+            .summary { display: flex; gap: 20px; margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 6px; }
+            .summary-item { display: flex; flex-direction: column; }
+            .label { font-size: 0.9em; color: #666; }
+            .value { font-size: 1.2em; font-weight: bold; }
+            .pass { color: #28a745; }
+            .fail { color: #dc3545; }
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+            th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; vertical-align: top; }
+            th { background-color: #f8f9fa; font-weight: 600; }
+            .test-pass { color: #28a745; font-weight: bold; }
+            .test-fail { color: #dc3545; font-weight: bold; }
+            .method { display: inline-block; padding: 4px 8px; border-radius: 4px; color: white; font-size: 0.8em; font-weight: bold; }
+            .GET { background-color: #61affe; }
+            .POST { background-color: #49cc90; }
+            .PUT { background-color: #fca130; }
+            .DELETE { background-color: #f93e3e; }
+            .PATCH { background-color: #50e3c2; }
+            .UNKNOWN { background-color: #777; }
+            .url { font-size: 0.8em; color: #999; word-break: break-all; }
+            .test-list { margin: 0; padding: 0; list-style-type: none; }
+            .test-list li { margin-bottom: 4px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>CSC13003 - API Testing - Search Employee</h1>
+            <div class="summary">
+                <div class="summary-item">
+                    <span class="label">Date</span>
+                    <span class="value">2026-01-15 14:59:57</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Total Pass</span>
+                    <span class="value pass">87</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Total Fail</span>
+                    <span class="value fail">0</span>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Request</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Time (ms)</th>
+                        <th>Tests</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <tr>
+                        <td>
+                            <div><strong>TC_001</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>623</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_002</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>401 Unauthorized</td>
+                        <td>629</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 401 Unauthorized</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_003</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=50</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>599</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_004</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=0</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>721</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200 OK</li><li><span class='test-pass'>✓</span> Response returns data list</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_005</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=-1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>641</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_006</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=abc</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>513</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_007</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=50 OR 1=1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>665</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_008</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>572</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_009</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=4</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>600</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_010</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=5</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>633</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200 OK</li><li><span class='test-pass'>✓</span> Response returns empty data list</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_011</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?empStatusId=text</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>656</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_012</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?limit=50</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>734</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_013</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?includeEmployees=currentAndPast</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>805</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_014</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?includeEmployees=onlyPast</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>570</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_015</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?includeEmployees=futurePeople</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>607</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_016</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?supervisorEmpNumbers[]=12</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>678</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_017</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?supervisorEmpNumbers=12</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>608</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_018</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees? jobTitleId=1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>707</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_019</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees? jobTitleId=9</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>523</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_020</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees? jobTitleId=99</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>632</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200 OK</li><li><span class='test-pass'>✓</span> Response returns empty data list</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_021</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?subunitId=1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>630</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_022</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?subunitId=6</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>576</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_023</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?subunitId=10</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>681</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200 OK</li><li><span class='test-pass'>✓</span> Response returns empty data list</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_024</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=0077</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>614</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_025</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=999999</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>715</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200 OK</li><li><span class='test-pass'>✓</span> Response returns empty data list</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_026</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=' OR '1'='1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>610</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_027</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?employeeId=<script>alert(1)</script></div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>740</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_028</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=employee.firstName&sortOrder=ASC</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>914</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_029</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=employee.firstName&sortOrder=DESC</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>738</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_030</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=invalid_column</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>521</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_031</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?sortField=employee.firstName&sortOrder=RANDOM</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>571</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_032</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?empNumber=1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>676</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_033</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?empNumber=ABC</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>422 Unprocessable Content</td>
+                        <td>592</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 422 Unprocessable Content</li><li><span class='test-pass'>✓</span> Error object structure is correct</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_034</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?jobTitleId=7&subunitId=3&empStatusId=1</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>613</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <div><strong>TC_035</strong></div>
+                            <div class="url">http://34.171.145.96/web/index.php/api/v2/pim/employees?jobTitleId=1&subunitId=6</div>
+                        </td>
+                        <td><span class="method GET">GET</span></td>
+                        <td>200 OK</td>
+                        <td>700</td>
+                        <td>
+                            <ul class='test-list'><li><span class='test-pass'>✓</span> Status code is 200</li><li><span class='test-pass'>✓</span> Response time is less than 2000ms</li><li><span class='test-pass'>✓</span> Response has data array</li></ul>
+                        </td>
+                    </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    
