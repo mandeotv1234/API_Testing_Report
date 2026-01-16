@@ -1,7 +1,7 @@
 {
-	"id": "58ca35c7-9f54-4f87-8c94-331237b46fc5",
+	"id": "00fbbcd1-8caf-4c3a-9a13-717eb00c15bd",
 	"name": "CSC13003 - API Testing - Add Employee",
-	"timestamp": "2026-01-15T14:47:55.457Z",
+	"timestamp": "2026-01-16T16:27:08.801Z",
 	"collection_id": "39921256-fed6ec80-dac8-4f10-9fe8-273bde7f75ea",
 	"folder_id": 0,
 	"environment_id": "39921256-253fc459-aa73-4929-a13f-64c7d7770b63",
@@ -9,14 +9,50 @@
 	"delay": 0,
 	"persist": true,
 	"status": "finished",
-	"startedAt": "2026-01-15T14:47:33.040Z",
+	"startedAt": "2026-01-16T16:26:44.815Z",
 	"totalFail": 10,
 	"results": [
+		{
+			"id": "2d44b610-18ee-476d-8312-fbce198049e6",
+			"name": "Step 1 - Get CSRF Token",
+			"url": "http://34.171.145.96/web/index.php/auth/login",
+			"time": 541,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				541
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "29d3df2d-4570-4fbc-8118-98d1181401d2",
+			"name": "Step 2 - Submit Login",
+			"url": "http://34.171.145.96/web/index.php/auth/validate",
+			"time": 536,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				536
+			],
+			"allTests": [
+				{}
+			]
+		},
 		{
 			"id": "4ff73b52-4cb7-4cec-bd80-e809453c758e",
 			"name": "TC_ADD_001",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 550,
+			"time": 537,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -36,7 +72,7 @@
 				}
 			},
 			"times": [
-				550
+				537
 			],
 			"allTests": [
 				{
@@ -49,7 +85,7 @@
 			"id": "955a6070-ed2b-459e-b5b8-00ce50725f3e",
 			"name": "TC_ADD_002",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 512,
+			"time": 757,
 			"responseCode": {
 				"code": 401,
 				"name": "Unauthorized"
@@ -64,7 +100,7 @@
 				}
 			},
 			"times": [
-				512
+				757
 			],
 			"allTests": [
 				{
@@ -76,7 +112,7 @@
 			"id": "87276dbd-eb7c-442f-8e69-1abcc3eddaca",
 			"name": "TC_ADD_003",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 568,
+			"time": 524,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -96,7 +132,7 @@
 				}
 			},
 			"times": [
-				568
+				524
 			],
 			"allTests": [
 				{
@@ -109,7 +145,7 @@
 			"id": "708ebdf1-fd41-4977-a53c-86b85cbc196d",
 			"name": "TC_ADD_004",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 581,
+			"time": 565,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -129,7 +165,7 @@
 				}
 			},
 			"times": [
-				581
+				565
 			],
 			"allTests": [
 				{
@@ -142,7 +178,7 @@
 			"id": "81b4cb77-590b-4b08-9871-c1a98404d940",
 			"name": "TC_ADD_005",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 605,
+			"time": 529,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -162,7 +198,7 @@
 				}
 			},
 			"times": [
-				605
+				529
 			],
 			"allTests": [
 				{
@@ -174,798 +210,6 @@
 		{
 			"id": "d10ead01-1c48-4a11-8a29-dec884fad680",
 			"name": "TC_ADD_006",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 596,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				596
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "6e09fca5-bbff-4122-b734-670ac644af8c",
-			"name": "TC_ADD_007",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 583,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				583
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "db45484a-8d35-47a5-8940-d324fad3ba7b",
-			"name": "TC_ADD_008",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 633,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				633
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "536d4261-f559-4449-b299-ac46e046dafa",
-			"name": "TC_ADD_009",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 527,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				527
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "90a15898-2369-45f2-aa59-f17f765c0cc1",
-			"name": "TC_ADD_010",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 665,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 2000ms": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Response time is less than 2000ms": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				665
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 2000ms": true
-				}
-			]
-		},
-		{
-			"id": "5d3c26a6-4aaf-4c22-9242-c54de183433a",
-			"name": "TC_ADD_011",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 531,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 409 Conflict": false,
-				"Error object structure is correct for Conflict": false
-			},
-			"testPassFailCounts": {
-				"Status code is 409 Conflict": {
-					"pass": 0,
-					"fail": 1
-				},
-				"Error object structure is correct for Conflict": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				531
-			],
-			"allTests": [
-				{
-					"Status code is 409 Conflict": false,
-					"Error object structure is correct for Conflict": false
-				}
-			]
-		},
-		{
-			"id": "4722b175-7278-4114-8309-50030c9b6173",
-			"name": "TC_ADD_012",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 541,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 2000ms": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Response time is less than 2000ms": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				541
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 2000ms": true
-				}
-			]
-		},
-		{
-			"id": "ebd47bc5-71f3-442a-be19-a5ef999e6dd0",
-			"name": "TC_ADD_013",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 582,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				582
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "0fbc4f52-fea5-42a0-870e-ad1832d1795f",
-			"name": "TC_ADD_014",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 518,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 2000ms": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Response time is less than 2000ms": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				518
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 2000ms": true
-				}
-			]
-		},
-		{
-			"id": "5a400146-36a6-40d5-b50f-489f6a1417f6",
-			"name": "TC_ADD_015",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 546,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				546
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "32d4013a-336b-4070-ae0c-da100979e9bd",
-			"name": "TC_ADD_016",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 530,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 2000ms": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Response time is less than 2000ms": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				530
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 2000ms": true
-				}
-			]
-		},
-		{
-			"id": "c43eb3ad-3d92-469b-87b0-755bc7830a47",
-			"name": "TC_ADD_017",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 531,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				531
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "5d321304-a4f8-442a-8997-c54719a9ed81",
-			"name": "TC_ADD_018",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 547,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 2000ms": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Response time is less than 2000ms": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				547
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 2000ms": true
-				}
-			]
-		},
-		{
-			"id": "4822d11d-d845-430e-9b9a-ec236a7f87ed",
-			"name": "TC_ADD_019",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 687,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": false,
-				"Error object structure is correct": false
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 0,
-					"fail": 1
-				},
-				"Error object structure is correct": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				687
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": false,
-					"Error object structure is correct": false
-				}
-			]
-		},
-		{
-			"id": "cd95a0f9-b083-4729-a405-d67cd34d4094",
-			"name": "TC_ADD_020",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 517,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": false,
-				"Error object structure is correct": false
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 0,
-					"fail": 1
-				},
-				"Error object structure is correct": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				517
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": false,
-					"Error object structure is correct": false
-				}
-			]
-		},
-		{
-			"id": "d7e78f18-3488-4bab-b868-290a5583da88",
-			"name": "TC_ADD_021",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 548,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				548
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "af189c4f-c3ef-4f6e-a9a0-dd4eef12f818",
-			"name": "TC_ADD_022",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 552,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": false,
-				"Error object structure is correct": false
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 0,
-					"fail": 1
-				},
-				"Error object structure is correct": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				552
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": false,
-					"Error object structure is correct": false
-				}
-			]
-		},
-		{
-			"id": "04d5abc1-9dbd-4c1f-9417-2767fbdea152",
-			"name": "TC_ADD_023",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 544,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": false,
-				"Error object structure is correct": false
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 0,
-					"fail": 1
-				},
-				"Error object structure is correct": {
-					"pass": 0,
-					"fail": 1
-				}
-			},
-			"times": [
-				544
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": false,
-					"Error object structure is correct": false
-				}
-			]
-		},
-		{
-			"id": "ad9790f2-e6d8-4571-a38c-1f608ba7efa4",
-			"name": "TC_ADD_024",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 619,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				619
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "7d0b427b-8bd7-4964-9d8b-0180ba5d9e3b",
-			"name": "TC_ADD_025",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 599,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				599
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "f72ddfc6-a70d-4280-b671-23af782b8714",
-			"name": "TC_ADD_026",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 683,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				683
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "c4d1f309-8afd-4fb9-8dc7-ba0f08e75c6d",
-			"name": "TC_ADD_027",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 724,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				724
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "f56d0cc1-797a-4dae-ae7a-356c2a523613",
-			"name": "TC_ADD_028",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 689,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				689
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "fcf5e499-f8e6-4c98-a38c-22559746705b",
-			"name": "TC_ADD_029",
-			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 569,
-			"responseCode": {
-				"code": 422,
-				"name": "Unprocessable Content"
-			},
-			"tests": {
-				"Status code is 422 Unprocessable Content": true,
-				"Error object structure is correct": true
-			},
-			"testPassFailCounts": {
-				"Status code is 422 Unprocessable Content": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Error object structure is correct": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				569
-			],
-			"allTests": [
-				{
-					"Status code is 422 Unprocessable Content": true,
-					"Error object structure is correct": true
-				}
-			]
-		},
-		{
-			"id": "7e88fe07-071c-44d1-94df-a49645004f06",
-			"name": "TC_ADD_030",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
 			"time": 523,
 			"responseCode": {
@@ -997,10 +241,109 @@
 			]
 		},
 		{
-			"id": "fac93a95-fd11-47af-a578-fa97179c3783",
-			"name": "TC_ADD_031",
+			"id": "6e09fca5-bbff-4122-b734-670ac644af8c",
+			"name": "TC_ADD_007",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 792,
+			"time": 509,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				509
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "db45484a-8d35-47a5-8940-d324fad3ba7b",
+			"name": "TC_ADD_008",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 557,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				557
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "536d4261-f559-4449-b299-ac46e046dafa",
+			"name": "TC_ADD_009",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 522,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				522
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "90a15898-2369-45f2-aa59-f17f765c0cc1",
+			"name": "TC_ADD_010",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 570,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1020,7 +363,700 @@
 				}
 			},
 			"times": [
-				792
+				570
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "5d3c26a6-4aaf-4c22-9242-c54de183433a",
+			"name": "TC_ADD_011",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 576,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 409 Conflict": false,
+				"Error object structure is correct for Conflict": false
+			},
+			"testPassFailCounts": {
+				"Status code is 409 Conflict": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error object structure is correct for Conflict": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				576
+			],
+			"allTests": [
+				{
+					"Status code is 409 Conflict": false,
+					"Error object structure is correct for Conflict": false
+				}
+			]
+		},
+		{
+			"id": "4722b175-7278-4114-8309-50030c9b6173",
+			"name": "TC_ADD_012",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 511,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				511
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "ebd47bc5-71f3-442a-be19-a5ef999e6dd0",
+			"name": "TC_ADD_013",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 501,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				501
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "0fbc4f52-fea5-42a0-870e-ad1832d1795f",
+			"name": "TC_ADD_014",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 546,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				546
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "5a400146-36a6-40d5-b50f-489f6a1417f6",
+			"name": "TC_ADD_015",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 499,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				499
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "32d4013a-336b-4070-ae0c-da100979e9bd",
+			"name": "TC_ADD_016",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 538,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				538
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "c43eb3ad-3d92-469b-87b0-755bc7830a47",
+			"name": "TC_ADD_017",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 547,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				547
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "5d321304-a4f8-442a-8997-c54719a9ed81",
+			"name": "TC_ADD_018",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 538,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				538
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "4822d11d-d845-430e-9b9a-ec236a7f87ed",
+			"name": "TC_ADD_019",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 746,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": false,
+				"Error object structure is correct": false
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error object structure is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				746
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": false,
+					"Error object structure is correct": false
+				}
+			]
+		},
+		{
+			"id": "cd95a0f9-b083-4729-a405-d67cd34d4094",
+			"name": "TC_ADD_020",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 712,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": false,
+				"Error object structure is correct": false
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error object structure is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				712
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": false,
+					"Error object structure is correct": false
+				}
+			]
+		},
+		{
+			"id": "d7e78f18-3488-4bab-b868-290a5583da88",
+			"name": "TC_ADD_021",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 516,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				516
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "af189c4f-c3ef-4f6e-a9a0-dd4eef12f818",
+			"name": "TC_ADD_022",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 766,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": false,
+				"Error object structure is correct": false
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error object structure is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				766
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": false,
+					"Error object structure is correct": false
+				}
+			]
+		},
+		{
+			"id": "04d5abc1-9dbd-4c1f-9417-2767fbdea152",
+			"name": "TC_ADD_023",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 720,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": false,
+				"Error object structure is correct": false
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error object structure is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				720
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": false,
+					"Error object structure is correct": false
+				}
+			]
+		},
+		{
+			"id": "ad9790f2-e6d8-4571-a38c-1f608ba7efa4",
+			"name": "TC_ADD_024",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 567,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				567
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "7d0b427b-8bd7-4964-9d8b-0180ba5d9e3b",
+			"name": "TC_ADD_025",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 511,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				511
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "f72ddfc6-a70d-4280-b671-23af782b8714",
+			"name": "TC_ADD_026",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 513,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				513
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "c4d1f309-8afd-4fb9-8dc7-ba0f08e75c6d",
+			"name": "TC_ADD_027",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 573,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				573
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "f56d0cc1-797a-4dae-ae7a-356c2a523613",
+			"name": "TC_ADD_028",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 702,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				702
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "fcf5e499-f8e6-4c98-a38c-22559746705b",
+			"name": "TC_ADD_029",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 500,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				500
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "7e88fe07-071c-44d1-94df-a49645004f06",
+			"name": "TC_ADD_030",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 522,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Content"
+			},
+			"tests": {
+				"Status code is 422 Unprocessable Content": true,
+				"Error object structure is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422 Unprocessable Content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error object structure is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				522
+			],
+			"allTests": [
+				{
+					"Status code is 422 Unprocessable Content": true,
+					"Error object structure is correct": true
+				}
+			]
+		},
+		{
+			"id": "fac93a95-fd11-47af-a578-fa97179c3783",
+			"name": "TC_ADD_031",
+			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
+			"time": 510,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				510
 			],
 			"allTests": [
 				{
@@ -1033,7 +1069,7 @@
 			"id": "d7a7359e-21fc-4a17-ae02-928b6c51fc46",
 			"name": "TC_ADD_032",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 681,
+			"time": 517,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1053,7 +1089,7 @@
 				}
 			},
 			"times": [
-				681
+				517
 			],
 			"allTests": [
 				{
@@ -1066,7 +1102,7 @@
 			"id": "7823574e-bf0f-4df4-836e-3956eea95e25",
 			"name": "TC_ADD_033",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 602,
+			"time": 504,
 			"responseCode": {
 				"code": 422,
 				"name": "Unprocessable Content"
@@ -1086,7 +1122,7 @@
 				}
 			},
 			"times": [
-				602
+				504
 			],
 			"allTests": [
 				{
@@ -1099,7 +1135,7 @@
 			"id": "ff8dbc05-0b56-44ff-b4d1-f171e924a010",
 			"name": "TC_ADD_034",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 680,
+			"time": 517,
 			"responseCode": {
 				"code": 422,
 				"name": "Unprocessable Content"
@@ -1119,7 +1155,7 @@
 				}
 			},
 			"times": [
-				680
+				517
 			],
 			"allTests": [
 				{
@@ -1132,7 +1168,7 @@
 			"id": "51e09cd3-ccff-4d1b-9e25-eacada7cc7c3",
 			"name": "TC_ADD_035",
 			"url": "http://34.171.145.96/web/index.php/api/v2/pim/employees",
-			"time": 832,
+			"time": 529,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -1152,7 +1188,7 @@
 				}
 			},
 			"times": [
-				832
+				529
 			],
 			"allTests": [
 				{
@@ -1163,9 +1199,17 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 20987,
+	"totalTime": 20851,
 	"collection": {
 		"requests": [
+			{
+				"id": "2d44b610-18ee-476d-8312-fbce198049e6",
+				"method": "GET"
+			},
+			{
+				"id": "29d3df2d-4570-4fbc-8118-98d1181401d2",
+				"method": "POST"
+			},
 			{
 				"id": "4ff73b52-4cb7-4cec-bd80-e809453c758e",
 				"method": "POST"
